@@ -1,101 +1,95 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Background Image Container */}
+      <div className="absolute top-0 left-0 w-full h-[900px]">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero-bg-qbrB0BnpvwciHDPs6j1ApBZx8k6aEX.png"
+          alt="Background"
+          width={1920}
+          height={900}
+          className="object-cover w-full h-full"
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      {/* Content Container */}
+      <div className="relative z-10">
+        {/* Navigation */}
+        <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
+          <div className="flex items-center space-x-2">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-AnxWribVe2cyTC9knLPcAhh8MB2CDv.png"
+              alt="Polarizeed Logo"
+              width={180}
+              height={40}
+              className="h-10 w-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </div>
+          <Link
+            href="tel:18005674569"
+            className="text-white text-lg hover:opacity-90 transition-opacity"
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            1 (800) 567 4569
+          </Link>
+        </nav>
+
+        {/* Main Content */}
+        <main className="container mx-auto px-4 pt-12 pb-24">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <div className="space-y-6">
+              <h1 className="text-white text-5xl md:text-7xl font-bold leading-tight">
+                Polarized
+                <br />
+                Innovation:
+              </h1>
+              <p className="text-white text-xl md:text-2xl leading-relaxed max-w-2xl">
+                Revolutionary dissolvable strips infused with{" "}
+                <span className="font-semibold">Delta 8</span> using
+                cutting-edge polarization technology.
+              </p>
+              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-700 transition-colors">
+                LEARN MORE
+              </button>
+            </div>
+
+            {/* Right Column */}
+            <div className="relative">
+              {/* Blur effect background - now as a sibling */}
+              <div className="absolute right-[-300px] top-1/2 -translate-y-1/2 w-[140%] h-[120%] bg-white/20 rounded-[40px] backdrop-blur-xl" />
+
+              {/* Product Cards Container - separate from blur */}
+              <div className="relative z-10 grid sm:grid-cols-2 gap-6">
+                {/* Energy Variant */}
+                <div className="relative transform transition-transform hover:scale-105">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/card-IvdEOPy5vp21Rv4DjDM0HxHbHkz1kb.png"
+                    alt="Energy Strip Product"
+                    width={400}
+                    height={500}
+                    className="w-full h-auto rounded-2xl"
+                  />
+                </div>
+
+                {/* Calm Variant */}
+                <div className="relative transform transition-transform hover:scale-105">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/card-1-WYzhGkDc6asx0eRYWeDHQ2F1ZxUgs0.png"
+                    alt="Calm Strip Product"
+                    width={400}
+                    height={500}
+                    className="w-full h-auto rounded-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
