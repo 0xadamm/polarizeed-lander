@@ -6,7 +6,7 @@ export default function ProductDisplay() {
     <section className="py-12 px-4">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-2 text-purple-800 tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-800 tracking-tight">
             Explore the Benefits of Calm
             <br />
             and Energy
@@ -14,9 +14,9 @@ export default function ProductDisplay() {
           <div className="h-1 w-32 bg-gradient-to-r from-purple-600 to-yellow-400 mb-12" />
         </div>
         <div className="flex justify-center">
-          <div className="grid grid-cols-12 gap-6 max-w-6xl mx-auto transform scale-[0.9] origin-top">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-6xl mx-auto">
             {/* Left Column - 60% */}
-            <div className="col-span-12 lg:col-span-7 space-y-6">
+            <div className="col-span-1 lg:col-span-7 space-y-6">
               {/* Fuel Your Day - Large Card */}
               <div
                 className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-400 to-orange-500 shadow-xl"
@@ -29,9 +29,9 @@ export default function ProductDisplay() {
                   fill
                   className="object-cover"
                 />
-                <div className="relative h-full p-8 md:p-12">
-                  <div className="grid grid-cols-[1fr,160px] gap-8 items-start">
-                    <div className="space-y-4">
+                <div className="relative h-full p-8 md:p-12 flex items-center">
+                  <div className="grid grid-cols-[1fr,200px] gap-8 items-center">
+                    <div className="space-y-6">
                       <h3 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
                         Fuel Your Day
                         <div className="h-0.5 w-12 bg-white mt-3" />
@@ -44,7 +44,7 @@ export default function ProductDisplay() {
                         </p>
                       </div>
                     </div>
-                    <div className="w-[160px] h-[240px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+                    <div className="w-[200px] h-[300px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
                   </div>
                 </div>
               </div>
@@ -61,8 +61,8 @@ export default function ProductDisplay() {
                   fill
                   className="object-cover"
                 />
-                <div className="relative h-full p-8 md:p-12">
-                  <div className="grid grid-cols-[1fr,160px] gap-8 h-full items-center">
+                <div className="relative h-full p-8 md:p-12 flex items-center">
+                  <div className="grid grid-cols-[1fr,160px] gap-8 items-center">
                     <div className="space-y-6">
                       <h3 className="text-white text-3xl md:text-4xl font-bold tracking-tight">
                         Elevate Your Energy
@@ -83,7 +83,7 @@ export default function ProductDisplay() {
             </div>
 
             {/* Right Column - 40% */}
-            <div className="col-span-12 lg:col-span-5 space-y-6">
+            <div className="col-span-1 lg:col-span-5 space-y-6">
               {/* Instant Relaxation - Small Card */}
               <div
                 className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-xl"
