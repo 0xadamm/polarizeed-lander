@@ -31,12 +31,12 @@ export default function ProductDisplay() {
                 />
                 <div className="relative h-full p-8 md:p-12 flex items-center">
                   <div className="grid grid-cols-[1fr,200px] gap-8 items-center">
-                    <div className="space-y-6">
+                    <div className="space-y-16">
                       <h3 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
                         Fuel Your Day
                         <div className="h-0.5 w-12 bg-white mt-3" />
                       </h3>
-                      <div className="flex items-center gap-2">
+                      <div className="space-y-4">
                         <Star className="text-white w-8 h-8" />
                         <p className="text-white text-lg leading-relaxed">
                           Boosts energy, enhances focus, and keeps you active
@@ -96,22 +96,20 @@ export default function ProductDisplay() {
                   fill
                   className="object-cover"
                 />
-                <div className="relative h-full p-8 md:p-12">
-                  <div className="grid grid-cols-[1fr,160px] gap-8 h-full items-center">
-                    <div className="space-y-6">
-                      <h3 className="text-white text-3xl md:text-4xl font-bold tracking-tight">
-                        Instant Relaxation
-                        <div className="h-0.5 w-12 bg-white mt-3" />
-                      </h3>
-                      <div className="space-y-4">
-                        <Star className="text-white w-8 h-8" />
-                        <p className="text-white leading-relaxed">
-                          Provides a quick, smooth, and effective way to
-                          experience Delta 8 relaxation.
-                        </p>
-                      </div>
+                <div className="relative h-full p-6 md:p-10 flex flex-col justify-between">
+                  <h3 className="text-white text-3xl md:text-4xl font-bold tracking-tight">
+                    Instant Relaxation
+                    <div className="h-0.5 w-12 bg-white mt-3" />
+                  </h3>
+                  <div className="grid grid-cols-[1fr,120px] gap-8 items-center">
+                    <div className="space-y-4">
+                      <Star className="text-white w-8 h-8" />
+                      <p className="text-white leading-relaxed">
+                        Provides a quick, smooth, and effective way to
+                        experience Delta 8 relaxation.
+                      </p>
                     </div>
-                    <div className="w-[160px] h-[240px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+                    <div className="w-[120px] h-[160px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
                   </div>
                 </div>
               </div>
@@ -128,22 +126,28 @@ export default function ProductDisplay() {
                   fill
                   className="object-cover"
                 />
-                <div className="relative h-full p-8 md:p-12">
-                  <div className="grid grid-cols-[1fr,160px] gap-8 h-full items-center">
+                <div className="relative h-full p-8 md:p-10 flex flex-col justify-center">
+                  {/* Header */}
+                  <div className="mb-8">
+                    <h3 className="text-white text-3xl md:text-4xl font-bold tracking-tight">
+                      Unwind and Relax
+                      <div className="h-0.5 w-12 bg-white mt-3" />
+                    </h3>
+                  </div>
+
+                  {/* Two Columns */}
+                  <div className="grid grid-cols-[1fr,140px] gap-8">
+                    {/* Left Column - Star and Description */}
                     <div className="space-y-6">
-                      <h3 className="text-white text-3xl md:text-4xl font-bold tracking-tight">
-                        Unwind and Relax
-                        <div className="h-0.5 w-12 bg-white mt-3" />
-                      </h3>
-                      <div className="space-y-4">
-                        <Star className="text-white w-8 h-8" />
-                        <p className="text-white leading-relaxed">
-                          Promotes relaxation, reduces stress, and encourages a
-                          peaceful state of mind.
-                        </p>
-                      </div>
+                      <Star className="text-white w-8 h-8" />
+                      <p className="text-white leading-relaxed">
+                        Promotes relaxation, reduces stress, and encourages a
+                        peaceful state of mind.
+                      </p>
                     </div>
-                    <div className="w-[160px] h-[240px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+
+                    {/* Right Column - Placeholder */}
+                    <div className="w-[140px] h-[200px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
                   </div>
                 </div>
               </div>
