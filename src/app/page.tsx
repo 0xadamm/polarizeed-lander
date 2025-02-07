@@ -5,6 +5,7 @@ import PolarizationService from "@/components/PolarizationService";
 import PolarizationFacts from "@/components/PolarizationFacts";
 import DiscoverNanoStrips from "@/components/DiscoverNanoStrips";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <PolarizationService />
       <DiscoverNanoStrips />
       <ContactForm />
+      <Footer />
     </>
   );
 }
