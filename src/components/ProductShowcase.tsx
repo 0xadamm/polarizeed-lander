@@ -39,8 +39,9 @@ export default function ProductDisplay() {
                       <div className="space-y-3 md:space-y-4">
                         <Star className="text-white w-6 h-6 md:w-8 md:h-8" />
                         <p className="text-white text-base md:text-lg leading-relaxed">
-                          Boosts energy, enhances focus, and keeps you active
-                          throughout the day.
+                          Power through your day with fast-acting energy,
+                          enhanced focus, and a smooth, uplifting boost to keep
+                          you motivated and refreshed.
                         </p>
                       </div>
                     </div>
@@ -71,8 +72,8 @@ export default function ProductDisplay() {
                       <div className="space-y-3 md:space-y-4">
                         <Star className="text-white w-6 h-6 md:w-8 md:h-8" />
                         <p className="text-white text-sm md:text-base leading-relaxed">
-                          Enhances alertness and focus with a fast-acting Delta
-                          8 experience
+                          Experience fast-acting energy and mental clarity for
+                          enhanced productivity and focus.
                         </p>
                       </div>
                     </div>
@@ -155,8 +156,8 @@ export default function ProductDisplay() {
                       <div className="space-y-3">
                         <Star className="text-white w-6 h-6" />
                         <p className="text-white text-sm leading-relaxed">
-                          Promotes relaxation, reduces stress, and encourages a
-                          peaceful state of mind.
+                          Unwind and relax with fast-acting calm, stress relief,
+                          and a gentle sense of tranquility.
                         </p>
                       </div>
                     </div>
@@ -177,8 +178,8 @@ export default function ProductDisplay() {
                     <div className="space-y-6">
                       <Star className="text-white w-8 h-8" />
                       <p className="text-white text-base leading-relaxed">
-                        Promotes relaxation, reduces stress, and encourages a
-                        peaceful state of mind.
+                        Unwind and relax with fast-acting calm, stress relief,
+                        and a gentle sense of tranquility.
                       </p>
                     </div>
                     <div className="w-[140px] h-[200px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />

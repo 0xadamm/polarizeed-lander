@@ -51,9 +51,9 @@ const DiscoverPolarization = () => {
                     </div>
                   </div>
                   <p className="text-white text-lg">
-                    Polarized Nano Technologies utilize advanced vibrational
-                    energy to enhance molecular structures, significantly
-                    improving absorption and bioavailability.
+                    Enhanced stability and bioavailability through molecular
+                    alignment, leading to more consistent and predictable
+                    effects with improved absorption.
                   </p>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -73,9 +73,9 @@ const DiscoverPolarization = () => {
                     </div>
                   </div>
                   <p className="text-white text-lg">
-                    Unlike conventional nano-scaling that diminishes
-                    effectiveness, polarization re-energizes molecules,
-                    delivering exponential benefits in wellness and performance.
+                    Refined compound effects for a smoother and more controlled
+                    experience, enabling precise dosing and reduced variability
+                    in individual responses.
                   </p>
                 </div>
               </div>

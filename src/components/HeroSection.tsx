@@ -43,14 +43,15 @@ export default function HeroSection() {
             {/* Left Column - Text Content */}
             <div className="space-y-6">
               <h1 className="text-white text-5xl md:text-7xl font-bold leading-tight">
-                Polarized
+                Experience
                 <br />
-                Innovation:
+                Perfect Balance
               </h1>
               <p className="text-white text-xl md:text-2xl leading-relaxed max-w-2xl">
-                Revolutionary dissolvable strips infused with{" "}
-                <span className="font-semibold">Delta 8</span> using
-                cutting-edge polarization technology.
+                Discover our revolutionary Delta-8 oral strips—designed for
+                fast-acting relief, mental clarity, and a smooth, uplifting
+                experience to keep you focused and stress-free throughout your
+                day.
               </p>
               <button className="bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-700 transition-colors">
                 LEARN MORE
