@@ -2,7 +2,7 @@ import React from "react";
 
 const PolarizationService = () => {
   return (
-    <section className="py-6 md:py-12 px-4">
+    <section className="py-2 md:py-3 px-4">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl">
