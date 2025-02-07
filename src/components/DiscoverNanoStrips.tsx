@@ -2,6 +2,7 @@
 
 import React from "react";
 import ProductCard from "./ProductCard";
+import { motion } from "framer-motion";
 
 const products = [
   {
@@ -61,6 +62,20 @@ const products = [
 ];
 
 const DiscoverNanoStrips = () => {
+  const cardVariants = {
+    hidden: { x: 100, opacity: 0 },
+    visible: (index: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: index * 0.2,
+        type: "spring",
+        stiffness: 50,
+        damping: 20,
+      },
+    }),
+  };
+
   return (
     <section className="py-12 px-4">
       <div className="container mx-auto max-w-6xl">
@@ -74,19 +89,32 @@ const DiscoverNanoStrips = () => {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product) => (
-            <ProductCard
+          {products.map((product, index) => (
+            <motion.div
               key={product.id}
-              title={product.title}
-              category={product.category}
-              description={product.description}
-              colorClass={product.colorClass}
-            />
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={cardVariants}
+            >
+              <ProductCard
+                title={product.title}
+                category={product.category}
+                description={product.description}
+                colorClass={product.colorClass}
+              />
+            </motion.div>
           ))}
         </div>
 
         {/* Load More Button */}
-        <div className="mt-8 flex justify-center">
+        <motion.div
+          className="mt-8 flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+        >
           <button className="w-12 h-12 rounded-full bg-white border border-gray-200 text-purple-800 hover:bg-gray-50 transition-colors flex items-center justify-center shadow-sm hover:shadow-md">
             <svg
               className="w-6 h-6"
@@ -102,7 +130,7 @@ const DiscoverNanoStrips = () => {
               />
             </svg>
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

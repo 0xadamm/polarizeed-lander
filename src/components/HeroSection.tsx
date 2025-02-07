@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
@@ -42,20 +45,48 @@ export default function HeroSection() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
             <div className="space-y-6">
-              <h1 className="text-white text-5xl md:text-7xl font-bold leading-tight">
+              <motion.h1
+                className="text-white text-5xl md:text-7xl font-bold leading-tight"
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                }}
+              >
                 Experience
                 <br />
                 Perfect Balance
-              </h1>
-              <p className="text-white text-xl md:text-2xl leading-relaxed max-w-2xl">
+              </motion.h1>
+              <motion.p
+                className="text-white text-xl md:text-2xl leading-relaxed max-w-2xl"
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: "easeOut",
+                }}
+              >
                 Discover our revolutionary Delta-8 oral strips—designed for
                 fast-acting relief, mental clarity, and a smooth, uplifting
                 experience to keep you focused and stress-free throughout your
                 day.
-              </p>
-              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-700 transition-colors">
+              </motion.p>
+              <motion.button
+                className="bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-700 transition-colors"
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.4,
+                  ease: "easeOut",
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 LEARN MORE
-              </button>
+              </motion.button>
             </div>
 
             {/* Right Column */}
@@ -66,7 +97,17 @@ export default function HeroSection() {
               {/* Product Cards Container - separate from blur */}
               <div className="relative z-10 grid sm:grid-cols-2 gap-6">
                 {/* Energy Variant */}
-                <div className="relative transform transition-transform hover:scale-105">
+                <motion.div
+                  className="relative"
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    ease: "easeOut",
+                  }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Image
                     src="/images/hero/hero-image-1.png"
                     alt="Energy Strip Product"
@@ -74,10 +115,21 @@ export default function HeroSection() {
                     height={500}
                     className="w-full h-auto rounded-2xl"
                   />
-                </div>
+                </motion.div>
 
                 {/* Calm Variant */}
-                <div className="relative transform transition-transform hover:scale-105">
+                <motion.div
+                  className="relative"
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.2,
+                    ease: "easeOut",
+                  }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Image
                     src="/images/hero/hero-image-2.png"
                     alt="Calm Strip Product"
@@ -85,7 +137,7 @@ export default function HeroSection() {
                     height={500}
                     className="w-full h-auto rounded-2xl"
                   />
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
