@@ -1,26 +1,52 @@
+"use client";
+
 import Image from "next/image";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ProductDisplay() {
   return (
     <section className="py-2 md:py-3 px-4">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 text-purple-800 tracking-tight">
+          <motion.h2
+            className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 text-purple-800 tracking-tight"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             Explore the Benefits of Calm
             <br className="hidden md:block" />
             and Energy
-          </h2>
-          <div className="h-1 w-24 md:w-32 bg-gradient-to-r from-purple-600 to-yellow-400 mb-8 md:mb-12" />
+          </motion.h2>
+          <motion.div
+            className="h-1 w-24 md:w-32 bg-gradient-to-r from-purple-600 to-yellow-400 mb-8 md:mb-12"
+            initial={{ width: 0, opacity: 0 }}
+            whileInView={{ width: "8rem", opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          />
         </div>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 max-w-6xl mx-auto">
             {/* Left Column - 60% */}
-            <div className="col-span-1 lg:col-span-7 space-y-4 md:space-y-6">
+            <motion.div
+              className="col-span-1 lg:col-span-7 space-y-4 md:space-y-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
               {/* Fuel Your Day - Large Card */}
-              <div
+              <motion.div
                 className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br from-orange-400 to-orange-500 shadow-xl"
                 style={{ height: "400px", minHeight: "400px" }}
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
               >
                 <div className="absolute inset-0 bg-black/10" />
                 <Image
@@ -48,12 +74,17 @@ export default function ProductDisplay() {
                     <div className="w-[120px] h-[200px] md:w-[200px] md:h-[300px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Elevate Your Energy - Small Card */}
-              <div
+              <motion.div
                 className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br from-indigo-500 to-indigo-600 shadow-xl"
                 style={{ height: "280px", minHeight: "280px" }}
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
               >
                 <div className="absolute inset-0 bg-black/10" />
                 <Image
@@ -80,15 +111,26 @@ export default function ProductDisplay() {
                     <div className="w-[100px] h-[160px] md:w-[160px] md:h-[240px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Right Column - 40% */}
-            <div className="col-span-1 lg:col-span-5 space-y-4 md:space-y-6">
+            <motion.div
+              className="col-span-1 lg:col-span-5 space-y-4 md:space-y-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
               {/* Instant Relaxation - Small Card */}
-              <div
+              <motion.div
                 className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-xl"
                 style={{ height: "280px", minHeight: "280px" }}
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
               >
                 <div className="absolute inset-0 bg-black/10" />
                 <Image
@@ -134,10 +176,17 @@ export default function ProductDisplay() {
                     <div className="w-[120px] h-[160px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Unwind and Relax - Large Card */}
-              <div className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br from-purple-500 to-purple-600 shadow-xl h-[280px] md:h-[400px]">
+              <motion.div
+                className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br from-purple-500 to-purple-600 shadow-xl h-[280px] md:h-[400px]"
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+              >
                 <div className="absolute inset-0 bg-black/10" />
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-bento-04-kaHNWnimuCsPWFzQ6uZmFUyh7XQmTG.png"
@@ -185,8 +234,8 @@ export default function ProductDisplay() {
                     <div className="w-[140px] h-[200px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

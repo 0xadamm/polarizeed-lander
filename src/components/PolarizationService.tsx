@@ -1,11 +1,20 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const PolarizationService = () => {
   return (
     <section className="py-2 md:py-3 px-4">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl">
+          <motion.div
+            className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             {/* Background Image */}
             <div
               className="absolute inset-0 z-0"
@@ -21,19 +30,43 @@ const PolarizationService = () => {
             <div className="relative z-10 p-6 md:p-12">
               {/* Title with gradient underline */}
               <div className="mb-6">
-                <h2 className="text-5xl font-bold text-white mb-2">
+                <motion.h2
+                  className="text-5xl font-bold text-white mb-2"
+                  initial={{ y: 40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   Polarization: More Than a Product
-                </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400" />
+                </motion.h2>
+                <motion.div
+                  className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400"
+                  initial={{ width: 0, opacity: 0 }}
+                  whileInView={{ width: "6rem", opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                />
               </div>
 
               {/* Subtitle */}
-              <h3 className="text-3xl text-white mb-12 max-w-3xl">
+              <motion.h3
+                className="text-3xl text-white mb-12 max-w-3xl"
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              >
                 Providing Revolutionary Delivery Solutions for Your Needs.
-              </h3>
+              </motion.h3>
 
               {/* Content with checkmark */}
-              <div className="flex items-start space-x-4 mb-12 max-w-3xl">
+              <motion.div
+                className="flex items-start space-x-4 mb-12 max-w-3xl"
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+              >
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
                     <svg
@@ -55,14 +88,22 @@ const PolarizationService = () => {
                   efficacy of their products. Partner with us to revolutionize
                   delivery mechanisms and create unparalleled user experiences.
                 </p>
-              </div>
+              </motion.div>
 
               {/* CTA Button */}
-              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-200">
+              <motion.button
+                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-200"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 LEARN MORE ABOUT OUR SERVICES
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

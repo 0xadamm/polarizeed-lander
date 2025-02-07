@@ -3,8 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { useScrollLock } from "@/context/ScrollLockContext";
 
 export default function HeroSection() {
+  const { setIsLocked } = useScrollLock();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (hasAnimated) {
+      setIsLocked(false);
+    }
+  }, [hasAnimated, setIsLocked]);
+
+  const onAnimationComplete = () => {
+    setHasAnimated(true);
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Background Image Container */}
@@ -129,6 +144,7 @@ export default function HeroSection() {
                   }}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                   whileTap={{ scale: 0.95 }}
+                  onAnimationComplete={onAnimationComplete}
                 >
                   <Image
                     src="/images/hero/hero-image-2.png"

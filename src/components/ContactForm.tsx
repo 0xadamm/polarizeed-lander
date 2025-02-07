@@ -1,8 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useScrollLock } from "@/context/ScrollLockContext";
 
 const ContactForm = () => {
+  const { setIsLocked } = useScrollLock();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -10,6 +15,16 @@ const ContactForm = () => {
     phone: "",
     interestedProduct: "All Products",
   });
+
+  useEffect(() => {
+    if (hasAnimated) {
+      setIsLocked(false);
+    }
+  }, [hasAnimated, setIsLocked]);
+
+  const onAnimationComplete = () => {
+    setHasAnimated(true);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,24 +52,75 @@ const ContactForm = () => {
 
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-center lg:flex-row lg:items-center lg:justify-between">
-          <div className="mb-12 lg:mb-0 lg:w-1/2 text-center lg:text-left">
-            <h2 className="mb-4 text-5xl font-bold text-white">
+          <motion.div
+            className="mb-12 lg:mb-0 lg:w-1/2 text-center lg:text-left"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h2
+              className="mb-4 text-5xl font-bold text-white"
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            >
               Get Early Access
-              <span className="block text-yellow-400">to Polarizeed</span>
-              <span className="block text-yellow-400">Delta 8 Strips</span>
-            </h2>
-            <p className="text-lg text-gray-300">
+              <motion.span
+                className="block text-yellow-400"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              >
+                to Polarizeed
+              </motion.span>
+              <motion.span
+                className="block text-yellow-400"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+              >
+                Delta 8 Strips
+              </motion.span>
+            </motion.h2>
+            <motion.p
+              className="text-lg text-gray-300"
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            >
               By submitting this form, you&apos;ll be the first to know about
               our launch and exclusive offers.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
-          <div className="w-full max-w-md mx-auto lg:w-5/12">
-            <form
+          <motion.div
+            className="w-full max-w-md mx-auto lg:w-5/12"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            onAnimationComplete={onAnimationComplete}
+          >
+            <motion.form
               onSubmit={handleSubmit}
               className="rounded-lg bg-gray-900/80 p-8 backdrop-blur-sm"
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             >
-              <div className="mb-4">
+              <motion.div
+                className="mb-4"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              >
                 <input
                   type="text"
                   name="firstName"
@@ -64,9 +130,15 @@ const ContactForm = () => {
                   className="w-full rounded-md bg-gray-800 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   required
                 />
-              </div>
+              </motion.div>
 
-              <div className="mb-4">
+              <motion.div
+                className="mb-4"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+              >
                 <input
                   type="text"
                   name="lastName"
@@ -76,9 +148,15 @@ const ContactForm = () => {
                   className="w-full rounded-md bg-gray-800 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   required
                 />
-              </div>
+              </motion.div>
 
-              <div className="mb-4">
+              <motion.div
+                className="mb-4"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+              >
                 <input
                   type="email"
                   name="email"
@@ -88,9 +166,15 @@ const ContactForm = () => {
                   className="w-full rounded-md bg-gray-800 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   required
                 />
-              </div>
+              </motion.div>
 
-              <div className="mb-4">
+              <motion.div
+                className="mb-4"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+              >
                 <input
                   type="tel"
                   name="phone"
@@ -99,9 +183,15 @@ const ContactForm = () => {
                   onChange={handleChange}
                   className="w-full rounded-md bg-gray-800 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
-              </div>
+              </motion.div>
 
-              <div className="mb-6">
+              <motion.div
+                className="mb-6"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+              >
                 <select
                   name="interestedProduct"
                   value={formData.interestedProduct}
@@ -112,16 +202,22 @@ const ContactForm = () => {
                   <option value="Delta 8 Strips">Delta 8 Strips</option>
                   <option value="Other Products">Other Products</option>
                 </select>
-              </div>
+              </motion.div>
 
-              <button
+              <motion.button
                 type="submit"
                 className="w-full rounded-md bg-purple-600 py-4 text-lg font-semibold text-white transition-colors hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 SIGN UP FOR EARLY ACCESS
-              </button>
-            </form>
-          </div>
+              </motion.button>
+            </motion.form>
+          </motion.div>
         </div>
       </div>
     </section>

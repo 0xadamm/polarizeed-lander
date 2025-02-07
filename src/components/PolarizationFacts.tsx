@@ -1,12 +1,21 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const PolarizationFacts = () => {
   return (
     <section className="py-2 md:py-3 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {/* Project Management Bento Box */}
-          <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl">
+          {/* Left Card - Nano Tech Innovation */}
+          <motion.div
+            className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <div
               className="absolute inset-0 z-0"
               style={{
@@ -20,16 +29,40 @@ const PolarizationFacts = () => {
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-black via-black/80 to-black/40 backdrop-blur-sm" />
             <div className="relative z-10 p-6 md:p-12">
               <div className="mb-4">
-                <h2 className="text-4xl font-bold text-white">
+                <motion.h2
+                  className="text-4xl font-bold text-white"
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                >
                   Nano Tech Innovation
-                </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400"></div>
+                </motion.h2>
+                <motion.div
+                  className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400"
+                  initial={{ width: 0, opacity: 0 }}
+                  whileInView={{ width: "6rem", opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                />
               </div>
-              <h3 className="text-2xl text-white mb-4">
+              <motion.h3
+                className="text-2xl text-white mb-4"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+              >
                 Revolutionizing Drug Delivery
-              </h3>
+              </motion.h3>
               <div className="space-y-4">
-                <div className="flex items-start space-x-4">
+                <motion.div
+                  className="flex items-start space-x-4"
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+                >
                   <div className="flex-shrink-0">
                     <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
                       <svg
@@ -49,8 +82,14 @@ const PolarizationFacts = () => {
                     NanoTech is revolutionizing health and wellness with
                     cutting-edge, patent-protected nano delivery systems.
                   </p>
-                </div>
-                <div className="flex items-start space-x-4">
+                </motion.div>
+                <motion.div
+                  className="flex items-start space-x-4"
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+                >
                   <div className="flex-shrink-0">
                     <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
                       <svg
@@ -71,13 +110,19 @@ const PolarizationFacts = () => {
                     rapid, precise dosing in under 60 seconds for superior
                     bioavailability.
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Task Management Bento Box */}
-          <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl">
+          {/* Right Card - Enhanced Delivery */}
+          <motion.div
+            className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <div
               className="absolute inset-0 z-0"
               style={{
@@ -91,16 +136,40 @@ const PolarizationFacts = () => {
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-black via-black/80 to-black/40 backdrop-blur-sm" />
             <div className="relative z-10 p-6 md:p-12">
               <div className="mb-4">
-                <h2 className="text-4xl font-bold text-white">
+                <motion.h2
+                  className="text-4xl font-bold text-white"
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                >
                   Enhanced Delivery
-                </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400"></div>
+                </motion.h2>
+                <motion.div
+                  className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400"
+                  initial={{ width: 0, opacity: 0 }}
+                  whileInView={{ width: "6rem", opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                />
               </div>
-              <h3 className="text-2xl text-white mb-4">
+              <motion.h3
+                className="text-2xl text-white mb-4"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+              >
                 Fast, Convenient & Consistent
-              </h3>
+              </motion.h3>
               <div className="space-y-4">
-                <div className="flex items-start space-x-4">
+                <motion.div
+                  className="flex items-start space-x-4"
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+                >
                   <div className="flex-shrink-0">
                     <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
                       <svg
@@ -121,8 +190,14 @@ const PolarizationFacts = () => {
                     Strips bypassing first-pass metabolism and digestive
                     degradation.
                   </p>
-                </div>
-                <div className="flex items-start space-x-4">
+                </motion.div>
+                <motion.div
+                  className="flex items-start space-x-4"
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+                >
                   <div className="flex-shrink-0">
                     <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
                       <svg
@@ -142,10 +217,10 @@ const PolarizationFacts = () => {
                     Enjoy effortless administration, precise dosing, and optimal
                     health benefits—all without water.
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

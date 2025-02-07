@@ -68,10 +68,10 @@ const DiscoverNanoStrips = () => {
       x: 0,
       opacity: 1,
       transition: {
-        delay: index * 0.2,
+        delay: index * 0.1,
         type: "spring",
-        stiffness: 50,
-        damping: 20,
+        stiffness: 100,
+        damping: 15,
       },
     }),
   };
@@ -95,7 +95,7 @@ const DiscoverNanoStrips = () => {
               custom={index}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}
             >
               <ProductCard
@@ -113,7 +113,7 @@ const DiscoverNanoStrips = () => {
           className="mt-8 flex justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.3 }}
         >
           <button className="w-12 h-12 rounded-full bg-white border border-gray-200 text-purple-800 hover:bg-gray-50 transition-colors flex items-center justify-center shadow-sm hover:shadow-md">
             <svg
