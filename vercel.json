@@ -5,5 +5,11 @@
       "destination": "/delta8",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/delta8",
+      "destination": "/"
+    }
   ]
 }
