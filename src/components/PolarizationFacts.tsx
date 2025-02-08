@@ -27,7 +27,7 @@ const PolarizationFacts = () => {
             />
             {/* Dark gradient overlay */}
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-black via-black/80 to-black/40 backdrop-blur-sm" />
-            <div className="relative z-10 p-6 md:p-12">
+            <div className="relative z-10 p-8 md:p-12">
               <div className="mb-4">
                 <motion.h2
                   className="text-4xl font-bold text-white"
@@ -134,7 +134,7 @@ const PolarizationFacts = () => {
             />
             {/* Dark gradient overlay */}
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-black via-black/80 to-black/40 backdrop-blur-sm" />
-            <div className="relative z-10 p-6 md:p-12">
+            <div className="relative z-10 p-8 md:p-12">
               <div className="mb-4">
                 <motion.h2
                   className="text-4xl font-bold text-white"

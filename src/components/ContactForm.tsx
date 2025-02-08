@@ -7,6 +7,10 @@ import { useScrollLock } from "@/context/ScrollLockContext";
 const ContactForm = () => {
   const { setIsLocked } = useScrollLock();
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -15,6 +19,9 @@ const ContactForm = () => {
     phone: "",
     interestedProduct: "All Products",
   });
+
+  const GOOGLE_APPS_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbyZLMEF3YH3dHTMG8vINCxZOJMw4tyFFov8G-EG2uhoN3djJ1vgVxiunvHZ7V7Fa74juQ/exec";
 
   useEffect(() => {
     if (hasAnimated) {
@@ -26,10 +33,40 @@ const ContactForm = () => {
     setHasAnimated(true);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Will implement backend integration later
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      console.log("Sending form data:", formData);
+
+      const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log("Response received:", response);
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        interestedProduct: "All Products",
+      });
+
+      setSubmitStatus("success");
+    } catch (error) {
+      console.error("Submission Error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -206,17 +243,28 @@ const ContactForm = () => {
 
               <motion.button
                 type="submit"
-                className="w-full rounded-md bg-purple-600 py-4 text-lg font-semibold text-white transition-colors hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                disabled={isSubmitting}
+                className={`w-full rounded-md ${
+                  isSubmitting
+                    ? "bg-purple-400"
+                    : "bg-purple-600 hover:bg-purple-700"
+                } py-4 text-lg font-semibold text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500`}
               >
-                SIGN UP FOR EARLY ACCESS
+                {isSubmitting ? "SUBMITTING..." : "SIGN UP FOR EARLY ACCESS"}
               </motion.button>
             </motion.form>
+
+            {submitStatus === "success" && (
+              <p className="mt-4 text-green-500">
+                Thank you for your submission!
+              </p>
+            )}
+
+            {submitStatus === "error" && (
+              <p className="mt-4 text-red-500">
+                There was an error. Please try again.
+              </p>
+            )}
           </motion.div>
         </div>
       </div>

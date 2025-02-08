@@ -27,7 +27,7 @@ const DiscoverPolarization = () => {
             />
 
             {/* Content Container */}
-            <div className="relative z-10 p-6 md:p-12">
+            <div className="relative z-10 p-8 md:p-12">
               {/* Title with gradient underline */}
               <div className="mb-6">
                 <motion.h2

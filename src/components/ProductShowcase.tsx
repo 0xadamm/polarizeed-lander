@@ -50,7 +50,7 @@ export default function ProductDisplay() {
               >
                 <div className="absolute inset-0 bg-black/10" />
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-bento-01-yK2Fgh3SjNQVcrXtEM9HZEh8Xco9z6.png"
+                  src="/images/bento-section/bg-bento-01.png"
                   alt="Energy background"
                   fill
                   className="object-cover"
@@ -71,7 +71,13 @@ export default function ProductDisplay() {
                         </p>
                       </div>
                     </div>
-                    <div className="w-[120px] h-[200px] md:w-[200px] md:h-[300px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+                    <Image
+                      src="/images/bento-section/energy-strip.png"
+                      alt="Energy Strip"
+                      width={200}
+                      height={300}
+                      className="w-[120px] h-[200px] md:w-[200px] md:h-[300px] object-contain rounded-2xl transform transition-transform hover:scale-105"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -88,7 +94,7 @@ export default function ProductDisplay() {
               >
                 <div className="absolute inset-0 bg-black/10" />
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-bento-03-IP0o3HMYdzZNvkBoiEzOcOxDbueFEQ.png"
+                  src="/images/bento-section/bg-bento-03.png"
                   alt="Elevate background"
                   fill
                   className="object-cover"
@@ -108,7 +114,13 @@ export default function ProductDisplay() {
                         </p>
                       </div>
                     </div>
-                    <div className="w-[100px] h-[160px] md:w-[160px] md:h-[240px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+                    <Image
+                      src="/images/bento-section/energy-vape.png"
+                      alt="Energy Vape"
+                      width={160}
+                      height={240}
+                      className="w-[100px] h-[160px] md:w-[160px] md:h-[240px] object-contain rounded-2xl transform transition-transform hover:scale-105"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -134,7 +146,7 @@ export default function ProductDisplay() {
               >
                 <div className="absolute inset-0 bg-black/10" />
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-bento-02-0G8owuxHUVZID7IqN3mZQpDXMVDCHt.png"
+                  src="/images/bento-section/bg-bento-02.png"
                   alt="Relaxation background"
                   fill
                   className="object-cover"
@@ -155,7 +167,13 @@ export default function ProductDisplay() {
                         </p>
                       </div>
                     </div>
-                    <div className="w-[100px] h-[140px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+                    <Image
+                      src="/images/bento-section/calm-vape.png"
+                      alt="Calm Vape"
+                      width={100}
+                      height={140}
+                      className="w-[100px] h-[140px] object-contain rounded-2xl transform transition-transform hover:scale-105"
+                    />
                   </div>
                 </div>
 
@@ -173,7 +191,13 @@ export default function ProductDisplay() {
                         experience Delta 8 relaxation.
                       </p>
                     </div>
-                    <div className="w-[120px] h-[160px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+                    <Image
+                      src="/images/bento-section/calm-vape.png"
+                      alt="Calm Vape"
+                      width={120}
+                      height={160}
+                      className="w-[120px] h-[160px] object-contain rounded-2xl transform transition-transform hover:scale-105"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -189,7 +213,7 @@ export default function ProductDisplay() {
               >
                 <div className="absolute inset-0 bg-black/10" />
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-bento-04-kaHNWnimuCsPWFzQ6uZmFUyh7XQmTG.png"
+                  src="/images/bento-section/bg-bento-04.png"
                   alt="Unwind background"
                   fill
                   className="object-cover"
@@ -210,7 +234,13 @@ export default function ProductDisplay() {
                         </p>
                       </div>
                     </div>
-                    <div className="w-[100px] h-[140px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+                    <Image
+                      src="/images/bento-section/calm-strip.png"
+                      alt="Calm Strip"
+                      width={100}
+                      height={140}
+                      className="w-[100px] h-[140px] object-contain rounded-2xl transform transition-transform hover:scale-105"
+                    />
                   </div>
                 </div>
 
@@ -231,7 +261,13 @@ export default function ProductDisplay() {
                         and a gentle sense of tranquility.
                       </p>
                     </div>
-                    <div className="w-[140px] h-[200px] bg-white/10 backdrop-blur rounded-2xl shadow-lg transform transition-transform hover:scale-105" />
+                    <Image
+                      src="/images/bento-section/calm-strip.png"
+                      alt="Calm Strip"
+                      width={140}
+                      height={200}
+                      className="w-[140px] h-[200px] object-contain rounded-2xl transform transition-transform hover:scale-105"
+                    />
                   </div>
                 </div>
               </motion.div>
