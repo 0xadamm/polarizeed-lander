@@ -6,11 +6,13 @@ import PolarizationFacts from "@/components/PolarizationFacts";
 // import DiscoverNanoStrips from "@/components/DiscoverNanoStrips";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+// import HeroSection2 from "@/components/HeroSection2";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      {/* <HeroSection2 /> */}
       <ProductShowcase />
       <DiscoverPolarization />
       <PolarizationFacts />

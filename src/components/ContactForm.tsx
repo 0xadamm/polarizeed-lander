@@ -131,7 +131,7 @@ const ContactForm = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
               >
-                Delta 8 Strips
+                Delta 8 Products
               </motion.span>
             </motion.h2>
             <motion.p

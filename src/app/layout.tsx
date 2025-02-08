@@ -16,9 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ScrollLockProvider>{children}</ScrollLockProvider>
+    <html lang="en" className="overflow-x-hidden">
+      <body className={`${inter.className} overflow-x-hidden`}>
+        <div className="relative w-full overflow-x-hidden">
+          <ScrollLockProvider>{children}</ScrollLockProvider>
+        </div>
       </body>
     </html>
   );

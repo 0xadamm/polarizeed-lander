@@ -16,8 +16,7 @@ export default function ProductDisplay() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Explore the Benefits of Calm
-            <br className="hidden md:block" />
+            Explore the Benefits of Calm <br className="hidden md:block" />
             and Energy
           </motion.h2>
           <motion.div
