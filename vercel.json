@@ -1,3 +1,9 @@
 {
-  "rewrites": [{ "source": "/delta8", "destination": "/" }]
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/delta8",
+      "permanent": true
+    }
+  ]
 }
