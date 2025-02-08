@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/delta8", "destination": "/" }]
+}
