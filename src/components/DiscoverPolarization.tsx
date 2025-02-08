@@ -1,9 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import PolarizationModal from "./PolarizationModal";
 
 const DiscoverPolarization = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-2 md:py-3 px-4">
       <div className="container mx-auto">
@@ -121,6 +124,7 @@ const DiscoverPolarization = () => {
 
               {/* CTA Button */}
               <motion.button
+                onClick={() => setIsModalOpen(true)}
                 className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-200"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -135,6 +139,12 @@ const DiscoverPolarization = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Modal */}
+      <PolarizationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };

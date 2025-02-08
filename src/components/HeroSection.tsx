@@ -88,20 +88,26 @@ export default function HeroSection() {
                 experience to keep you focused and stress-free throughout your
                 day.
               </motion.p>
-              <motion.button
-                className="bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-700 transition-colors"
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.4,
-                  ease: "easeOut",
-                }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Link
+                href="#product-showcase"
+                scroll={true}
+                className="mt-8 inline-block"
               >
-                LEARN MORE
-              </motion.button>
+                <motion.button
+                  className="bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-700 transition-colors"
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.4,
+                    ease: "easeOut",
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  LEARN MORE
+                </motion.button>
+              </Link>
             </div>
 
             {/* Right Column */}

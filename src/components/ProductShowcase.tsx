@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function ProductDisplay() {
   return (
-    <section className="py-2 md:py-3 px-4">
+    <section id="product-showcase" className="py-2 md:py-3 px-4">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <motion.h2
