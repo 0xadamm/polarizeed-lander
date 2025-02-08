@@ -18,10 +18,11 @@ const ContactForm = () => {
     email: "",
     phone: "",
     interestedProduct: "All Products",
+    marketingOptOut: false,
   });
 
   const GOOGLE_APPS_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyZLMEF3YH3dHTMG8vINCxZOJMw4tyFFov8G-EG2uhoN3djJ1vgVxiunvHZ7V7Fa74juQ/exec";
+    "https://script.google.com/macros/s/AKfycbznoZfoing_RNQoEe2wOGFlHj3jwA4G23Bec4D6z5zcy8G1sP9gLNfL-3wNPpFrKLzmKw/exec";
 
   useEffect(() => {
     if (hasAnimated) {
@@ -58,9 +59,15 @@ const ContactForm = () => {
         email: "",
         phone: "",
         interestedProduct: "All Products",
+        marketingOptOut: false,
       });
 
       setSubmitStatus("success");
+
+      // Reset form status after 3 seconds
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 3000);
     } catch (error) {
       console.error("Submission Error:", error);
       setSubmitStatus("error");
@@ -72,9 +79,13 @@ const ContactForm = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
+    const value =
+      e.target.type === "checkbox"
+        ? (e.target as HTMLInputElement).checked
+        : e.target.value;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: value,
     });
   };
 
@@ -241,30 +252,51 @@ const ContactForm = () => {
                 </select>
               </motion.div>
 
+              <motion.div
+                className="mb-6 flex items-center"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
+              >
+                <input
+                  type="checkbox"
+                  name="marketingOptOut"
+                  id="marketingOptOut"
+                  checked={formData.marketingOptOut}
+                  onChange={handleChange}
+                  className="h-4 w-4 rounded border-gray-300 bg-gray-800 text-purple-600 focus:ring-2 focus:ring-purple-500"
+                />
+                <label
+                  htmlFor="marketingOptOut"
+                  className="ml-2 text-sm text-gray-300"
+                >
+                  Opt out of marketing communications
+                </label>
+              </motion.div>
+
               <motion.button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || submitStatus === "success"}
                 className={`w-full rounded-md ${
                   isSubmitting
                     ? "bg-purple-400"
+                    : submitStatus === "success"
+                    ? "bg-green-600"
+                    : submitStatus === "error"
+                    ? "bg-red-600 hover:bg-red-700"
                     : "bg-purple-600 hover:bg-purple-700"
                 } py-4 text-lg font-semibold text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500`}
               >
-                {isSubmitting ? "SUBMITTING..." : "SIGN UP FOR EARLY ACCESS"}
+                {isSubmitting
+                  ? "SUBMITTING..."
+                  : submitStatus === "success"
+                  ? "THANK YOU FOR SIGNING UP! ✓"
+                  : submitStatus === "error"
+                  ? "ERROR - PLEASE TRY AGAIN"
+                  : "SIGN UP FOR EARLY ACCESS"}
               </motion.button>
             </motion.form>
-
-            {submitStatus === "success" && (
-              <p className="mt-4 text-green-500">
-                Thank you for your submission!
-              </p>
-            )}
-
-            {submitStatus === "error" && (
-              <p className="mt-4 text-red-500">
-                There was an error. Please try again.
-              </p>
-            )}
           </motion.div>
         </div>
       </div>
