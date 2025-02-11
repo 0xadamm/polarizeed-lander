@@ -25,7 +25,7 @@ export default function HeroSection() {
       {/* Background Image Container */}
       <div className="absolute inset-0">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero-bg-qbrB0BnpvwciHDPs6j1ApBZx8k6aEX.png"
+          src="/images/hero/hero-bg.png"
           alt="Background"
           width={1920}
           height={900}
@@ -113,7 +113,7 @@ export default function HeroSection() {
             {/* Right Column */}
             <div className="relative">
               {/* Blur effect background - now as a sibling */}
-              <div className="hidden md:block absolute right-[-300px] top-1/2 -translate-y-1/2 w-[140%] h-[120%] bg-white/20 rounded-[40px] backdrop-blur-xl" />
+              <div className="hidden md:block absolute right-[-300px] top-1/2 -translate-y-1/2 w-[140%] h-[120%] bg-white/10 rounded-[40px] backdrop-blur-[8px]" />
 
               {/* Product Cards Container - separate from blur */}
               <div className="relative z-10 grid sm:grid-cols-2 gap-6">

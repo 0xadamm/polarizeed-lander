@@ -23,7 +23,7 @@ const PolarizationService = () => {
               className="absolute inset-0 z-0"
               style={{
                 backgroundImage:
-                  "url('/images/polarization-service/bg-polarization-service.png')",
+                  "url('/images/polarization-service/polarization-service-bg.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

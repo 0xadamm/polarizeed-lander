@@ -23,7 +23,7 @@ const DiscoverPolarization = () => {
               className="absolute inset-0 z-0"
               style={{
                 backgroundImage:
-                  "url('/images/discover-polarization/bg-discover-polarization.png')",
+                  "url('/images/discover-polarization/discover-polarization-bg.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
