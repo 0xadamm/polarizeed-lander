@@ -19,14 +19,15 @@ const PolarizationFacts = () => {
             <div
               className="absolute inset-0 z-0"
               style={{
-                backgroundImage:
-                  "url('/images/polorization-facts/polarization-facts-4.png')",
+                backgroundImage: "url('/images/new-images/new-bgs1.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             />
             {/* Dark gradient overlay */}
-            <div className="absolute inset-0 z-0 bg-gradient-to-r from-black via-black/80 to-black/40 backdrop-blur-sm" />
+            <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20 backdrop-blur-sm" />
+            {/* Blue glow layer */}
+            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-blue-900/20 via-blue-900/5 to-transparent mix-blend-soft-light" />
             <div className="relative z-10 p-8 md:p-12">
               <div className="mb-4">
                 <motion.h2
@@ -79,8 +80,8 @@ const PolarizationFacts = () => {
                     </div>
                   </div>
                   <p className="text-white text-lg">
-                    NanoTech is revolutionizing health and wellness with
-                    cutting-edge, patent-protected nano delivery systems.
+                    NanoTech is revolutionizing health and wellness with a
+                    cutting-edge, patent-protected polarized delivery systems.
                   </p>
                 </motion.div>
                 <motion.div
@@ -126,14 +127,15 @@ const PolarizationFacts = () => {
             <div
               className="absolute inset-0 z-0"
               style={{
-                backgroundImage:
-                  "url('/images/polorization-facts/polarization-facts-5.png')",
+                backgroundImage: "url('/images/new-images/new-bgs2.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             />
             {/* Dark gradient overlay */}
-            <div className="absolute inset-0 z-0 bg-gradient-to-r from-black via-black/80 to-black/40 backdrop-blur-sm" />
+            <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20 backdrop-blur-sm" />
+            {/* Blue glow layer */}
+            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-blue-900/20 via-blue-900/5 to-transparent mix-blend-soft-light" />
             <div className="relative z-10 p-8 md:p-12">
               <div className="mb-4">
                 <motion.h2

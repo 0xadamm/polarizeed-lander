@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ScrollLockProvider } from "@/context/ScrollLockContext";
 import { Analytics } from "@vercel/analytics/react";
+import BackgroundImages from "@/components/BackgroundImages";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <body className={`${inter.className} overflow-x-hidden`}>
+        <BackgroundImages />
         <div className="relative w-full overflow-x-hidden">
           <ScrollLockProvider>{children}</ScrollLockProvider>
         </div>

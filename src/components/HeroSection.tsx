@@ -48,10 +48,10 @@ export default function HeroSection() {
             />
           </div>
           <Link
-            href="tel:18005674569"
+            href="tel:18885856266"
             className="text-white text-lg hover:opacity-90 transition-opacity"
           >
-            1 (800) 567 4569
+            1 (888) 585 NANO
           </Link>
         </nav>
 

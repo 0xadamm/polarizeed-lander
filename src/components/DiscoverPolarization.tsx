@@ -23,11 +23,14 @@ const DiscoverPolarization = () => {
               className="absolute inset-0 z-0"
               style={{
                 backgroundImage:
-                  "url('/images/discover-polarization/discover-polarization-bg.png')",
+                  "url('/images/discover-polarization/discover-polarization-new.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             />
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-purple-600/10 via-transparent to-black/20" />
 
             {/* Content Container */}
             <div className="relative z-10 p-8 md:p-12">
@@ -87,9 +90,9 @@ const DiscoverPolarization = () => {
                     </div>
                   </div>
                   <p className="text-white text-lg">
-                    Enhanced stability and bioavailability through molecular
-                    alignment, leading to more consistent and predictable
-                    effects with improved absorption.
+                    Enhanced bioavailability and stability through molecular
+                    alignment, leading to a more consistent and balanced effect
+                    with up to 3-5x more absorption.
                   </p>
                 </motion.div>
                 <motion.div

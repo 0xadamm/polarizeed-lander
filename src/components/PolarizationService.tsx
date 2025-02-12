@@ -23,11 +23,14 @@ const PolarizationService = () => {
               className="absolute inset-0 z-0"
               style={{
                 backgroundImage:
-                  "url('/images/polarization-service/polarization-service-bg.png')",
+                  "url('/images/polarization-service/polarization-service-new.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             />
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-purple-600/10 via-transparent to-black/20 backdrop-brightness-125" />
 
             {/* Content Container */}
             <div className="relative z-10 p-8 md:p-12">

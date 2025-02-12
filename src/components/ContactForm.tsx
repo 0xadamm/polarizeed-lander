@@ -90,8 +90,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-2 md:py-3 ">
-      <div className="relative min-h-screen flex items-center justify-center">
+    <section className="pt-2 md:pt-3">
+      <div className="relative flex items-center justify-center py-12">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{

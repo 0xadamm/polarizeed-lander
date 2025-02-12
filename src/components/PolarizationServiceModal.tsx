@@ -162,9 +162,13 @@ export default function PolarizationServiceModal({
                     <p className="text-lg text-white/90">
                       Our Polarization as a Service (PaaS) platform leverages
                       cutting-edge nano-encapsulation and monopole
-                      electromagnetic vibration technology to transform your
-                      products effectiveness. We provide end-to-end solutions
-                      for businesses seeking to enhance their formulations.
+                      electromagnetic vibration technology to enhance your
+                      products potency and bioavailability for maximum effect.
+                      We provide end-to-end solutions for businesses seeking to
+                      improve their formulations. Consumers who use a polarized
+                      product tend to absorb 3 to 5 times more Delta-8 or CBD
+                      through their cannabinoid receptors due to the increased
+                      bio-availability.
                     </p>
 
                     <motion.h3

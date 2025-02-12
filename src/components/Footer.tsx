@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="py-2 md:py-3 px-4">
+    <section className="py-2 md:py-3 px-4 bg-black">
       <div className="container mx-auto">
-        <div className="max-w-6xl mx-auto bg-white">
+        <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <Image
-                src="/images/logo.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-AnxWribVe2cyTC9knLPcAhh8MB2CDv.png"
                 alt="Polarizeed Logo"
-                width={194}
+                width={180}
                 height={40}
                 className="h-10 w-auto"
               />
@@ -60,12 +60,12 @@ const Footer = () => {
             </div>
 
             <div className="text-[#E91E63] text-xl font-medium mt-4 md:mt-0">
-              1 (800) 567 4569
+              1 (888) 585 NANO
             </div>
           </div>
 
           <div className="mt-6">
-            <p className="text-gray-500 text-sm text-center">
+            <p className="text-gray-400 text-sm text-center">
               Legal Disclaimer: by submitting this form, you&apos;ll be the
               first to know about our launch and exclusive offers.
             </p>

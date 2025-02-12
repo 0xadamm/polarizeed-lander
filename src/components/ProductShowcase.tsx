@@ -10,7 +10,7 @@ export default function ProductDisplay() {
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 text-purple-800 tracking-tight"
+            className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 text-white tracking-tight"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -47,13 +47,13 @@ export default function ProductDisplay() {
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="absolute inset-0 bg-black/10" />
                 <Image
                   src="/images/bento-section/bg-bento-01.png"
                   alt="Energy background"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-black/30" />
                 <div className="relative h-full p-6 md:p-12 flex items-center">
                   <div className="grid grid-cols-[1fr,120px] md:grid-cols-[1fr,200px] gap-4 md:gap-8 items-center">
                     <div className="space-y-8 md:space-y-16">
@@ -91,13 +91,13 @@ export default function ProductDisplay() {
                 transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="absolute inset-0 bg-black/10" />
                 <Image
                   src="/images/bento-section/bg-bento-03.png"
                   alt="Elevate background"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-black/30" />
                 <div className="relative h-full p-6 md:p-12 flex items-center">
                   <div className="grid grid-cols-[1fr,100px] md:grid-cols-[1fr,160px] gap-4 md:gap-8 items-center">
                     <div className="space-y-4 md:space-y-6">
@@ -143,13 +143,13 @@ export default function ProductDisplay() {
                 transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="absolute inset-0 bg-black/10" />
                 <Image
                   src="/images/bento-section/bg-bento-02.png"
                   alt="Relaxation background"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-black/30" />
                 {/* Mobile Layout */}
                 <div className="relative h-full p-6 flex items-center md:hidden">
                   <div className="grid grid-cols-[1fr,100px] gap-4 items-center">
@@ -210,13 +210,13 @@ export default function ProductDisplay() {
                 transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="absolute inset-0 bg-black/10" />
                 <Image
                   src="/images/bento-section/bg-bento-04.png"
                   alt="Unwind background"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-black/30" />
                 {/* Mobile Layout */}
                 <div className="relative h-full p-6 flex items-center md:hidden">
                   <div className="grid grid-cols-[1fr,100px] gap-4 items-center">
