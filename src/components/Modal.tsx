@@ -77,24 +77,52 @@ const Modal = ({
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
-            className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-gradient-to-br from-white/10 to-white/5 shadow-2xl ring-1 ring-white/20"
+            className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-gradient-to-br from-purple-900 to-black p-8 shadow-xl"
           >
-            {/* Gradient Overlay */}
-            <div
-              className={`absolute inset-0 z-0 bg-gradient-to-br ${colorClass} opacity-90`}
-            />
+            {/* Background Pattern */}
+            <div className="absolute inset-0 overflow-hidden">
+              {/* Grid lines */}
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(66,168,255,0.05)_1px,transparent_1px),linear-gradient(0deg,rgba(66,168,255,0.05)_1px,transparent_1px)] bg-[size:30px_30px]" />
+
+              {/* Diagonal lines */}
+              <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(66,168,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px]" />
+
+              {/* Animated light beams */}
+              <div className="absolute inset-0">
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <motion.div
+                    key={`beam-${i}`}
+                    className="absolute h-[1px] w-full bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{
+                      opacity: [0, 1, 1, 0],
+                      y: ["0%", "100%"],
+                    }}
+                    transition={{
+                      duration: 5 + i * 2,
+                      repeat: Infinity,
+                      delay: i * 2,
+                      ease: "linear",
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* Glowing orb */}
+              <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-purple-600/20 blur-[100px] animate-pulse" />
+            </div>
 
             {/* Content */}
-            <div className="relative z-10 p-8">
-              {/* Close Button */}
+            <div className="relative z-10">
+              {/* Close button */}
               <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
                 onClick={onClose}
-                className="group absolute right-4 top-4 rounded-full bg-black/30 p-2 backdrop-blur-sm transition-colors hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-white/50"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="absolute right-4 top-4 text-white/80 hover:text-white"
               >
                 <svg
-                  className="h-6 w-6 text-white/80 transition-colors group-hover:text-white"
+                  className="w-6 h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

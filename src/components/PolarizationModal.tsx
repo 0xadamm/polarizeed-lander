@@ -125,6 +125,40 @@ export default function PolarizationModal({
                 variants={modalVariants}
                 className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-gradient-to-br from-purple-900 to-black p-8 shadow-xl"
               >
+                {/* Background Pattern */}
+                <div className="absolute inset-0 overflow-hidden">
+                  {/* Grid lines */}
+                  <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(66,168,255,0.05)_1px,transparent_1px),linear-gradient(0deg,rgba(66,168,255,0.05)_1px,transparent_1px)] bg-[size:30px_30px]" />
+
+                  {/* Diagonal lines */}
+                  <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(66,168,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px]" />
+
+                  {/* Animated light beams */}
+                  <div className="absolute inset-0">
+                    {Array.from({ length: 4 }).map((_, i) => (
+                      <motion.div
+                        key={`beam-${i}`}
+                        className="absolute h-[1px] w-full bg-gradient-to-r from-transparent via-purple-500/20 to-transparent"
+                        initial={{ opacity: 0, y: 0 }}
+                        animate={{
+                          opacity: [0, 1, 1, 0],
+                          y: ["0%", "100%"],
+                        }}
+                        transition={{
+                          duration: 7 + i * 2,
+                          repeat: Infinity,
+                          delay: i * 1.5,
+                          ease: "linear",
+                        }}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Glowing orbs */}
+                  <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-purple-600/20 blur-[100px] animate-pulse" />
+                  <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-blue-600/20 blur-[100px] animate-pulse" />
+                </div>
+
                 {/* Close button */}
                 <motion.button
                   onClick={onClose}
@@ -141,7 +175,7 @@ export default function PolarizationModal({
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  className="space-y-8"
+                  className="relative z-10 space-y-8"
                 >
                   <motion.div variants={itemVariants}>
                     <Dialog.Title className="text-3xl font-bold text-white mb-2">
