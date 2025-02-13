@@ -11,17 +11,17 @@ const products = [
     category: "brain power, anxiety & focus",
     description:
       "Rapid absorption. Boosts brain power, gives more focus & clarity, calms your body from anxiety.",
-    imageSrc: "/images/ packaging/BetterDays.png",
-    colorClass: "from-purple-100",
+    imageSrc: "/images/packaging/BetterDays-big.png",
+    colorClass: "from-purple-200",
   },
   {
     id: 2,
     title: "Boost",
-    category: "brain power, anxiety & focus",
+    category: "Neuro Focus & Memory Support",
     description:
       "Rapid absorption. Boosts brain power, gives more focus & clarity, calms your body from anxiety.",
-    imageSrc: "/images/ packaging/Boost.png",
-    colorClass: "from-emerald-100",
+    imageSrc: "/images/packaging/Boost-big.png",
+    colorClass: "from-emerald-400",
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ const products = [
     category: "brain power, anxiety & focus",
     description:
       "Rapid absorption. Boosts brain power, gives more focus & clarity, calms your body from anxiety.",
-    imageSrc: "/images/ packaging/Nootropic.png",
-    colorClass: "from-yellow-100",
+    imageSrc: "/images/packaging/Nootropic-big.png",
+    colorClass: "from-yellow-200",
   },
   {
     id: 4,
@@ -38,8 +38,8 @@ const products = [
     category: "brain power, anxiety & focus",
     description:
       "Rapid absorption. Boosts brain power, gives more focus & clarity, calms your body from anxiety.",
-    imageSrc: "/images/ packaging/Hydration.png",
-    colorClass: "from-blue-100",
+    imageSrc: "/images/packaging/Hydration-big.png",
+    colorClass: "from-blue-200",
   },
   {
     id: 5,
@@ -47,8 +47,8 @@ const products = [
     category: "brain power, anxiety & focus",
     description:
       "Rapid absorption. Boosts brain power, gives more focus & clarity, calms your body from anxiety.",
-    imageSrc: "/images/ packaging/Performance.png",
-    colorClass: "from-orange-100",
+    imageSrc: "/images/packaging/Performance-big.png",
+    colorClass: "from-orange-200",
   },
   {
     id: 6,
@@ -56,8 +56,8 @@ const products = [
     category: "brain power, anxiety & focus",
     description:
       "Rapid absorption. Boosts brain power, gives more focus & clarity, calms your body from anxiety.",
-    imageSrc: "/images/ packaging/PrimedFemale.png",
-    colorClass: "from-pink-100",
+    imageSrc: "/images/packaging/PrimedFemale-big.png",
+    colorClass: "from-pink-200",
   },
 ];
 
@@ -81,7 +81,7 @@ const DiscoverNanoStrips = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Title */}
         <div className="mb-8">
-          <h2 className="text-4xl font-bold text-purple-800 mb-2">
+          <h2 className="text-4xl font-bold text-white mb-2">
             Discover NanoStrip Wellness in Every Strip
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400"></div>
@@ -103,6 +103,7 @@ const DiscoverNanoStrips = () => {
                 category={product.category}
                 description={product.description}
                 colorClass={product.colorClass}
+                imageSrc={product.imageSrc}
               />
             </motion.div>
           ))}

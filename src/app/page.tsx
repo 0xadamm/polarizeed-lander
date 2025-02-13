@@ -19,6 +19,7 @@ export default function Home() {
       <DiscoverPolarization />
       <PolarizationFacts />
       <PolarizationService />
+      {/* <DiscoverNanoStrips /> */}
       <ContactForm />
       {/* <ContactFormCopy /> */}
       <Footer />

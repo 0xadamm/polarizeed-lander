@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface ModalProps {
   isOpen: boolean;
@@ -8,6 +9,7 @@ interface ModalProps {
   category: string;
   description: string;
   colorClass: string;
+  imageSrc: string;
 }
 
 const Modal = ({
@@ -17,6 +19,7 @@ const Modal = ({
   category,
   description,
   colorClass,
+  imageSrc,
 }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -74,15 +77,12 @@ const Modal = ({
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
-            className="relative w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-br from-white/10 to-white/5 shadow-2xl ring-1 ring-white/20"
+            className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-gradient-to-br from-white/10 to-white/5 shadow-2xl ring-1 ring-white/20"
           >
             {/* Gradient Overlay */}
             <div
               className={`absolute inset-0 z-0 bg-gradient-to-br ${colorClass} opacity-90`}
             />
-
-            {/* Glass Effect Overlay */}
-            <div className="absolute inset-0 z-0 backdrop-blur-md" />
 
             {/* Content */}
             <div className="relative z-10 p-8">
@@ -108,96 +108,106 @@ const Modal = ({
                 </svg>
               </motion.button>
 
-              {/* Header */}
-              <div className="mb-8">
-                <motion.h2
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.1 }}
-                  id="modal-title"
-                  className="text-4xl font-bold tracking-tight text-white sm:text-5xl"
-                >
-                  {title}
-                </motion.h2>
+              <div className="flex gap-8">
+                {/* Product Image */}
                 <motion.div
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
-                  className={`mt-4 h-1 w-24 rounded-full bg-gradient-to-r ${colorClass}`}
-                />
-                <motion.h3
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="mt-4 text-2xl font-medium text-white/90"
+                  className="flex-shrink-0"
                 >
-                  {category}
-                </motion.h3>
+                  <div className="relative h-[400px] w-[280px]">
+                    <Image
+                      src={imageSrc}
+                      alt={title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Right Content */}
+                <div className="flex-1">
+                  {/* Header */}
+                  <div className="mb-8">
+                    <motion.h2
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.1 }}
+                      id="modal-title"
+                      className="text-4xl font-bold tracking-tight text-white"
+                    >
+                      {title}
+                    </motion.h2>
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ delay: 0.2 }}
+                      className={`mt-2 h-1 w-24 rounded-full bg-gradient-to-r ${colorClass}`}
+                    />
+                    <motion.h3
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                      className="mt-2 text-xl font-medium text-white/90"
+                    >
+                      {category}
+                    </motion.h3>
+                  </div>
+
+                  {/* Benefits */}
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    className="space-y-6"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm ring-1 ring-white/20">
+                          <svg
+                            className="h-5 w-5 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <p className="text-lg leading-relaxed text-white/90">
+                        {description}
+                      </p>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm ring-1 ring-white/20">
+                          <svg
+                            className="h-5 w-5 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <p className="text-lg leading-relaxed text-white/90">
+                        Experience breakthrough innovation with our advanced
+                        delivery system, ensuring optimal absorption and
+                        effectiveness.
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
-
-              {/* Benefits */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="space-y-6"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm ring-1 ring-white/20">
-                      <svg
-                        className="h-6 w-6 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <p className="text-lg leading-relaxed text-white/90">
-                    {description}
-                  </p>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm ring-1 ring-white/20">
-                      <svg
-                        className="h-6 w-6 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <p className="text-lg leading-relaxed text-white/90">
-                    Experience breakthrough innovation with our advanced
-                    delivery system, ensuring optimal absorption and
-                    effectiveness.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Product Image */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="mt-8 flex justify-center"
-              >
-                <div className="w-full max-w-[380px] overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10">
-                  <div className="aspect-[16/9] w-full" />
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         </div>

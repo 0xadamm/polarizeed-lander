@@ -59,7 +59,7 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="text-[#E91E63] text-xl font-medium mt-4 md:mt-0">
+            <div className="text-white text-xl font-medium mt-4 md:mt-0">
               1 (888) 585 NANO
             </div>
           </div>
