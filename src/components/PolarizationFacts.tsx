@@ -27,7 +27,7 @@ const PolarizationFacts = () => {
             {/* Dark gradient overlay */}
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20 backdrop-blur-sm" />
             {/* Blue glow layer */}
-            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-blue-900/20 via-blue-900/5 to-transparent mix-blend-soft-light" />
+            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-cyan-900/20 via-cyan-900/5 to-transparent mix-blend-soft-light" />
             <div className="relative z-10 p-8 md:p-12">
               <div className="mb-4">
                 <motion.h2
@@ -40,7 +40,7 @@ const PolarizationFacts = () => {
                   Nano Tech Innovation
                 </motion.h2>
                 <motion.div
-                  className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400"
+                  className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-cyan-200"
                   initial={{ width: 0, opacity: 0 }}
                   whileInView={{ width: "6rem", opacity: 1 }}
                   viewport={{ once: true }}
@@ -65,9 +65,9 @@ const PolarizationFacts = () => {
                   transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-cyan-400 flex items-center justify-center">
                       <svg
-                        className="w-5 h-5 text-white"
+                        className="w-5 h-5 text-black"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -94,9 +94,9 @@ const PolarizationFacts = () => {
                   transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-cyan-400 flex items-center justify-center">
                       <svg
-                        className="w-5 h-5 text-white"
+                        className="w-5 h-5 text-black"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -139,7 +139,7 @@ const PolarizationFacts = () => {
             {/* Dark gradient overlay */}
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20 backdrop-blur-sm" />
             {/* Blue glow layer */}
-            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-blue-900/20 via-blue-900/5 to-transparent mix-blend-soft-light" />
+            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-cyan-900/20 via-cyan-900/5 to-transparent mix-blend-soft-light" />
             <div className="relative z-10 p-8 md:p-12">
               <div className="mb-4">
                 <motion.h2
@@ -152,7 +152,7 @@ const PolarizationFacts = () => {
                   Enhanced Delivery
                 </motion.h2>
                 <motion.div
-                  className="w-24 h-1 bg-gradient-to-r from-purple-600 to-yellow-400"
+                  className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-cyan-200"
                   initial={{ width: 0, opacity: 0 }}
                   whileInView={{ width: "6rem", opacity: 1 }}
                   viewport={{ once: true }}
@@ -177,9 +177,9 @@ const PolarizationFacts = () => {
                   transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-cyan-400 flex items-center justify-center">
                       <svg
-                        className="w-5 h-5 text-white"
+                        className="w-5 h-5 text-black"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -207,9 +207,9 @@ const PolarizationFacts = () => {
                   transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-cyan-400 flex items-center justify-center">
                       <svg
-                        className="w-5 h-5 text-white"
+                        className="w-5 h-5 text-black"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"

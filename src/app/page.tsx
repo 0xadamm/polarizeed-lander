@@ -8,6 +8,7 @@ import ContactForm from "@/components/ContactForm";
 // import ContactFormCopy from "@/components/ContactFormCopy";
 import Footer from "@/components/Footer";
 import BackgroundImages from "@/components/BackgroundImages";
+import NanoStripsIntro from "@/components/NanoStripsIntro";
 // import HeroSection2 from "@/components/HeroSection2";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <PolarizationFacts />
       <PolarizationService />
       {/* <DiscoverNanoStrips /> */}
+      <NanoStripsIntro />
       <ContactForm />
       {/* <ContactFormCopy /> */}
       <Footer />
