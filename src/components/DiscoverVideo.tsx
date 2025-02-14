@@ -1,9 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const DiscoverVideo = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <section className="py-2 md:py-3 px-4">
       <div className="container mx-auto">
@@ -30,13 +39,84 @@ const DiscoverVideo = () => {
             <div className="absolute inset-0 z-[1] bg-gradient-to-r from-cyan-900/20 via-cyan-900/5 to-transparent mix-blend-soft-light" />
             <div className="relative z-10 h-full">
               <video
+                ref={videoRef}
                 src="/video/proton-short-square-no-cc.mov"
                 className="w-full h-full object-cover"
                 autoPlay
-                muted
+                muted={isMuted}
                 loop
                 playsInline
               />
+              <button
+                onClick={toggleMute}
+                className="absolute top-6 right-6 z-30 bg-gray-500 bg-opacity-70 text-white flex items-center justify-center w-12 h-12 rounded-full hover:bg-opacity-90"
+              >
+                {isMuted ? (
+                  // Muted icon - speaker with a cross
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M11 5L5 9H1v6h4l6 4V5z"
+                    />
+                    <line
+                      x1="17"
+                      y1="9"
+                      x2="23"
+                      y2="15"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <line
+                      x1="23"
+                      y1="9"
+                      x2="17"
+                      y2="15"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ) : (
+                  // Unmuted icon - speaker with sound waves
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M11 5L5 9H1v6h4l6 4V5z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M15.536 8.464a5 5 0 010 7.072"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17.657 6.343a8 8 0 010 11.314"
+                    />
+                  </svg>
+                )}
+              </button>
             </div>
           </motion.div>
 
