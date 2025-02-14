@@ -51,7 +51,7 @@ const DiscoverVideo = () => {
             <div
               className="absolute inset-0 z-0"
               style={{
-                backgroundImage: "url('/images/new-images/new-bgs1.png')",
+                backgroundImage: "url('/images/new-images/new-bgs3.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
