@@ -10,13 +10,12 @@ const NanoStripsIntro = () => {
             <div
               className="absolute inset-0 z-0"
               style={{
-                backgroundImage:
-                  "url('/images/nanostrips-intro/bg-nanostrips-intro.png')",
+                backgroundImage: "url('/images/nanostrips-intro/nano-bg.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             />
-            <div className="absolute inset-0 z-0 backdrop-blur-[2px] bg-black/10" />
+            <div className="absolute inset-0 z-0 backdrop-blur-[2px] bg-gradient-to-r from-black/80 to-black/20" />
 
             {/* Content Container */}
             <div className="relative z-10 p-6 md:p-12">
