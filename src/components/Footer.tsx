@@ -19,39 +19,13 @@ const Footer = () => {
 
             <div className="flex items-center gap-6">
               <Link
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/images/fb.png"
-                  alt="Facebook"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10"
-                />
-              </Link>
-              <Link
-                href="https://instagram.com"
+                href="https://instagram.com/polarizeed.tech"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
                   src="/images/ig.png"
                   alt="Instagram"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10"
-                />
-              </Link>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/images/x.png"
-                  alt="Twitter"
                   width={40}
                   height={40}
                   className="h-10 w-10"

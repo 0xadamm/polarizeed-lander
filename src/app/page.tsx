@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import ProductShowcase from "@/components/ProductShowcase";
 import DiscoverPolarization from "@/components/DiscoverPolarization";
+import DiscoverVideo from "@/components/DiscoverVideo";
 import PolarizationService from "@/components/PolarizationService";
 import PolarizationFacts from "@/components/PolarizationFacts";
 // import DiscoverNanoStrips from "@/components/DiscoverNanoStrips";
@@ -17,6 +18,7 @@ export default function Home() {
       <BackgroundImages />
       <HeroSection />
       <ProductShowcase />
+      <DiscoverVideo />
       <DiscoverPolarization />
       <PolarizationFacts />
       <PolarizationService />
