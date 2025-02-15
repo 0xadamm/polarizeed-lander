@@ -248,7 +248,13 @@ const ContactForm = () => {
                     className="w-full rounded-md bg-gray-800 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   >
                     <option value="All Products">All Products</option>
-                    <option value="Delta 8 Strips">Delta 8 Strips</option>
+                    <option value="Delta 8 Products">Delta 8 Products</option>
+                    <option value="Nano Strips Products">
+                      Nano Strips Products
+                    </option>
+                    <option value="Polarization as a Product">
+                      Polarization as a Product
+                    </option>
                     <option value="Other Products">Other Products</option>
                   </select>
                 </motion.div>
